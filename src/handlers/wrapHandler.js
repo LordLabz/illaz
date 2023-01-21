@@ -19,29 +19,29 @@ export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
           dbAbi,
           signer
         );
-/*
-        let dbTxn = await dbContract.getFeesStatus(currentAccount);
-
-        const fee = dbTxn.toNumber();
-
-        const tokenIdsParsed = tokenIds
-          .split(",")
-          .map((token) => parseInt(token));
-        const numberOfValues = tokenIdsParsed.length;
-
-        let feeToAppend = 0;
-        if (fee === 0) {
-          if (numberOfValues === 1) {
-            feeToAppend = 0.01;
-          } else if (numberOfValues > 1) {
-            feeToAppend = 0.02;
-          }
-        } else if (fee === 1) {
-          if (numberOfValues) {
-            feeToAppend = 0.01;
-          }
-        }
-*/
+        /*
+                let dbTxn = await dbContract.getFeesStatus(currentAccount);
+        
+                const fee = dbTxn.toNumber();
+        
+                const tokenIdsParsed = tokenIds
+                  .split(",")
+                  .map((token) => parseInt(token));
+                const numberOfValues = tokenIdsParsed.length;
+        
+                let feeToAppend = 0;
+                if (fee === 0) {
+                  if (numberOfValues === 1) {
+                    feeToAppend = 0.01;
+                  } else if (numberOfValues > 1) {
+                    feeToAppend = 0.02;
+                  }
+                } else if (fee === 1) {
+                  if (numberOfValues) {
+                    feeToAppend = 0.01;
+                  }
+                }
+        */
         const wrapperContract = new ethers.Contract(
           process.env.REACT_APP_WRAPPER_ABI_ADDRESS,
           wrapperAbi,
