@@ -1,398 +1,400 @@
 [
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"inputs": [],
-		"name": "Owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "option",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_address",
-				"type": "address"
-			}
-		],
-		"name": "configNBAddresses",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_tokenid",
-				"type": "uint256"
-			}
-		],
-		"name": "getArtStatus",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_index",
-				"type": "uint256"
-			}
-		],
-		"name": "getHolderAddress",
-		"outputs": [
-			{
-				"internalType": "address payable",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_feed",
-				"type": "uint256"
-			}
-		],
-		"name": "getNumHolders",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_migrator",
-				"type": "address"
-			}
-		],
-		"name": "getWrappedStatus",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_tokenID",
-				"type": "uint256"
-			}
-		],
-		"name": "isBlockedNFT",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_address",
-				"type": "address"
-			}
-		],
-		"name": "isHolder",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_wallet",
-				"type": "address"
-			}
-		],
-		"name": "isHolderInArray",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "int256",
-				"name": "option",
-				"type": "int256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_tokenID",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_wallet",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_numNFT",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "_onoroff",
-				"type": "bool"
-			}
-		],
-		"name": "manageBlockedNFT",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "status",
-				"type": "bool"
-			},
-			{
-				"internalType": "address",
-				"name": "_holder",
-				"type": "address"
-			}
-		],
-		"name": "manageHolderAddresses",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_option",
-				"type": "uint256"
-			}
-		],
-		"name": "manageNumHolders",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "numblocked",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "numholders",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_tid",
-				"type": "uint256"
-			}
-		],
-		"name": "ownerOfToken",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "ruggedproject",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pathtype",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_path",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_tokenid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_holder",
-				"type": "address"
-			}
-		],
-		"name": "setARTinWrapper",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_tokennumber",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_holder",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_pathno",
-				"type": "uint256"
-			}
-		],
-		"name": "setArtPath",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_wrapper",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "_haswrapped",
-				"type": "bool"
-			}
-		],
-		"name": "setUserStatus",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "upgradecontract",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "wrapperaddress",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
+  {
+    "type": "constructor",
+    "name": "",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "Owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "configNBAddresses",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "option",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getArtStatus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_tokenid",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getHolderAddress",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_index",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address payable"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getNumHolders",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_feed",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getWrappedStatus",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_migrator",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isBlockedNFT",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_tokenID",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      },
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isHolder",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isHolderInArray",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_wallet",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      },
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "manageBlockedNFT",
+    "inputs": [
+      {
+        "type": "int256",
+        "name": "option",
+        "internalType": "int256"
+      },
+      {
+        "type": "uint256",
+        "name": "_tokenID",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_wallet",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_numNFT",
+        "internalType": "uint256"
+      },
+      {
+        "type": "bool",
+        "name": "_onoroff",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "manageHolderAddresses",
+    "inputs": [
+      {
+        "type": "bool",
+        "name": "status",
+        "internalType": "bool"
+      },
+      {
+        "type": "address",
+        "name": "_holder",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "manageNumHolders",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_option",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "numblocked",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "numholders",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ownerOfToken",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_tid",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "ruggedproject",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setARTinWrapper",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_pathtype",
+        "internalType": "uint256"
+      },
+      {
+        "type": "string",
+        "name": "_path",
+        "internalType": "string"
+      },
+      {
+        "type": "uint256",
+        "name": "_tokenid",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_holder",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setArtPath",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_tokennumber",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_holder",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_pathno",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setUserStatus",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_wrapper",
+        "internalType": "address"
+      },
+      {
+        "type": "bool",
+        "name": "_haswrapped",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "upgradecontract",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "wrapperaddress",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  }
 ]
