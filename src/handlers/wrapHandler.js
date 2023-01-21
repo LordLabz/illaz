@@ -19,7 +19,7 @@ export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
           dbAbi,
           signer
         );
-
+/*
         let dbTxn = await dbContract.getFeesStatus(currentAccount);
 
         const fee = dbTxn.toNumber();
@@ -41,7 +41,7 @@ export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
             feeToAppend = 0.01;
           }
         }
-
+*/
         const wrapperContract = new ethers.Contract(
           process.env.REACT_APP_WRAPPER_ABI_ADDRESS,
           wrapperAbi,
