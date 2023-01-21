@@ -23,12 +23,12 @@ export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
                 let dbTxn = await dbContract.getFeesStatus(currentAccount);
         
                 const fee = dbTxn.toNumber();
-        
+        */
                 const tokenIdsParsed = tokenIds
                   .split(",")
                   .map((token) => parseInt(token));
                 const numberOfValues = tokenIdsParsed.length;
-        
+        /*
                 let feeToAppend = 0;
                 if (fee === 0) {
                   if (numberOfValues === 1) {
