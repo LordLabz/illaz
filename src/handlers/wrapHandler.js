@@ -4,74 +4,57 @@ import wrapperAbi from "../contracts/abi/WRAPPER_ABI.json";
 import { Button } from "../shared/components/Button";
 
 export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
-  const wrapHandler = async () => {
-    try {
-      if (!tokenIds) {
-        throw Error("Please add inputs divided by commas!");
-      }
-      const { ethereum } = window;
+    const wrapHandler = async () => {
+        try {
+            if (!tokenIds) {
+                throw Error("Please add inputs divided by commas!");
+            }
+            const { ethereum } = window;
 
-      if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const dbContract = new ethers.Contract(
-          process.env.REACT_APP_DB_ABI_ADDRESS,
-          dbAbi,
-          signer
-        );
-        /*
-                let dbTxn = await dbContract.getFeesStatus(currentAccount);
-        
-                const fee = dbTxn.toNumber();
-        */
+            if (ethereum) {
+                const provider = new ethers.providers.Web3Provider(ethereum);
+                const signer = provider.getSigner();
+                const dbContract = new ethers.Contract(
+                    process.env.REACT_APP_DB_ABI_ADDRESS,
+                    dbAbi,
+                    signer
+                );
+
                 const tokenIdsParsed = tokenIds
-                  .split(",")
-                  .map((token) => parseInt(token));
+                    .split(",")
+                    .map((token) => parseInt(token));
                 const numberOfValues = tokenIdsParsed.length;
-        /*
-                let feeToAppend = 0;
-                if (fee === 0) {
-                  if (numberOfValues === 1) {
-                    feeToAppend = 0.01;
-                  } else if (numberOfValues > 1) {
-                    feeToAppend = 0.02;
-                  }
-                } else if (fee === 1) {
-                  if (numberOfValues) {
-                    feeToAppend = 0.01;
-                  }
-                }
-        */
-        const wrapperContract = new ethers.Contract(
-          process.env.REACT_APP_WRAPPER_ABI_ADDRESS,
-          wrapperAbi,
-          signer
-        );
 
-        console.log(tokenIdsParsed);
-        let wrapTxn = await wrapperContract.wrap(tokenIdsParsed);
+                const wrapperContract = new ethers.Contract(
+                    process.env.REACT_APP_WRAPPER_ABI_ADDRESS,
+                    wrapperAbi,
+                    signer
+                );
 
-        console.log("wrap... please wait");
-        await wrapTxn.wait();
+                console.log(tokenIdsParsed);
+                let wrapTxn = await wrapperContract.wrap(tokenIdsParsed);
 
-        console.log(
-          `Mined, see transaction: https://rinkeby.etherscan.io/tx/${wrapTxn.hash}`
-        );
-      } else {
-        console.log("Ethereum object does not exist");
-        errorCallback({ message: "Ethereum object does not exist" });
-      }
-    } catch (e) {
-      console.log(e);
-      errorCallback({
-        message: `Wrap signing failed! ${e.message}`,
-      });
-    }
-  };
+                console.log("wrap... please wait");
+                await wrapTxn.wait();
 
-  return (
-    <>
-      <Button text="Wrap NFT(s)" onApplyClicked={wrapHandler} />
-    </>
-  );
+                console.log(
+                    `Mined, see transaction: https://rinkeby.etherscan.io/tx/${wrapTxn.hash}`
+                );
+            } else {
+                console.log("Ethereum object does not exist");
+                errorCallback({ message: "Ethereum object does not exist" });
+            }
+        } catch (e) {
+            console.log(e);
+            errorCallback({
+                message: `Wrap signing failed! ${e.message}`,
+            });
+        }
+    };
+
+    return (
+        <>
+            <Button text="Wrap NFT(s)" onApplyClicked={wrapHandler} />
+        </>
+    );
 };
