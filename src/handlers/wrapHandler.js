@@ -49,9 +49,7 @@ export const WrapButton = ({ tokenIds, currentAccount, errorCallback }) => {
         );
 
         console.log(tokenIdsParsed);
-        let wrapTxn = await wrapperContract.wrap(tokenIdsParsed, {
-          value: ethers.utils.parseEther(feeToAppend.toString()),
-        });
+        let wrapTxn = await wrapperContract.wrap(tokenIdsParsed);
 
         console.log("wrap... please wait");
         await wrapTxn.wait();
